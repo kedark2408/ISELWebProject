@@ -7,7 +7,7 @@ pipeline{
                     sh '''
                     mvn validate
                     mvn compile
-                    mvn package
+                    mvn -Dmaven.test.skip=true package
                     '''
             }
             post {
