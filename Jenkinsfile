@@ -14,9 +14,9 @@ pipeline{
             post {
                 success {
                     archiveArtifacts '**/*.war'
+                }
             }
         }
-        
         stage('Deploy to Tomcat') {
             steps {
                 build job: 'DeployWebprojectToTomcat', parameters: [string(name: 'MASTER_JOB', value: 'BuildWebProject')]
