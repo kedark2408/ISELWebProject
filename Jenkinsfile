@@ -7,7 +7,6 @@ pipeline{
                     sh '''
                     mvn validate
                     mvn compile
-                    mvn test
                     mvn package
                     '''
             }
